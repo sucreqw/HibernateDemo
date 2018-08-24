@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-8-23 23:20:46 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.sucre.hibernateDemo.entity.User" table="user">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        <property name="token" type="java.lang.String">
+            <column name="TOKEN" />
+        </property>
+        <property name="regday" type="java.util.Date">
+            <column name="REGDAY" />
+        </property>
+        <property name="regip" type="java.lang.String">
+            <column name="REGIP" />
+        </property>
+        <property name="uid" type="java.lang.String">
+            <column name="UID" />
+        </property>
+        <property name="nickname" type="java.lang.String">
+            <column name="NICKNAME" />
+        </property>
+        <property name="psd" type="java.lang.String">
+            <column name="PSD" />
+        </property>
+        <property name="refresh_token" type="java.lang.String">
+            <column name="REFRESH_TOKEN" />
+        </property>
+        <property name="isblock" type="java.lang.Boolean">
+            <column name="ISBLOCK" />
+        </property>
+        <property name="cookie" type="java.lang.String">
+            <column name="COOKIE" />
+        </property>
+        <property name="avater" type="java.lang.String">
+            <column name="AVATER" />
+        </property>
+        <property name="ismanager" type="java.lang.Boolean">
+            <column name="ISMANAGER" />
+        </property>
+    </class>
+</hibernate-mapping>
