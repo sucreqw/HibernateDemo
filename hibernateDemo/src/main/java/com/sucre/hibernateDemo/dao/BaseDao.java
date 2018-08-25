@@ -17,8 +17,7 @@ import org.hibernate.service.ServiceRegistry;
  *
  */
 public class BaseDao {
-	// 一个自己的实例
-	private static BaseDao instance = null;
+	
 	// 创建一个sessionFactory工厂类 通过它建立一个数据库连接会话
 	SessionFactory sessionFactory = null;
 	// sessionFactory 又需要另一个类,配置类
@@ -29,15 +28,7 @@ public class BaseDao {
 	Session session = null;
 	// 事务处理器
 	Transaction transaction = null;
-
-	/**
-	 * 私有化构造器
-	 */
-	private BaseDao() {
-
-	}
-
-	/**
+/**
 	 * 初始化hibernate配置
 	 */
 	public void init() {
@@ -120,15 +111,4 @@ public class BaseDao {
         return result; 
 	}
 	
-	/**
-	 * 单例模式,用来取得自己的实例
-	 * 
-	 * @return
-	 */
-	public static BaseDao getInstance() {
-		if (instance == null) {
-			instance = new BaseDao();
-		}
-		return instance;
-	}
 }
